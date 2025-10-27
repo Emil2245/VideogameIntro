@@ -9,6 +9,7 @@ import com.badlogic.gdx.utils.ScreenUtils;
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class Main extends Game {
 
+
     @Override
     public void create() {
         setScreen(new MainGameScreen(this));
