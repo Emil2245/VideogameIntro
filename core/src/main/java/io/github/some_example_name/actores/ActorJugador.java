@@ -10,22 +10,20 @@ public class ActorJugador extends Actor {
 
     public ActorJugador(Texture tJugador) {
         this.tJugador = tJugador;
-        setSize(tJugador.getWidth(),tJugador.getHeight());
-        this.isAlive();
+        setSize(tJugador.getWidth(), tJugador.getHeight());
+        this.alive = true;
 
     }
 
     @Override
     public void act(float delta) {
-//        setX(getX()-250*delta);
-
+        if (isAlive()) setX(getX() + 100 * delta);
     }
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        batch.draw(tJugador,getX(),getY());
+        batch.draw(tJugador, getX(), getY());
     }
-
 
     public boolean isAlive() {
         return alive;
